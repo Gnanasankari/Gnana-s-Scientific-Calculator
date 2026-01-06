@@ -1,1 +1,1 @@
-# Gnana-s-Scientific-Calculator
+# Gnana's Scientific Calculator using HTML, CSS and JS 
