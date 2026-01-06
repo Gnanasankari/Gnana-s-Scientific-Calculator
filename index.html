@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gnana's Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg">
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+  </div>
+
+  <main class="wrap">
+    <section class="calc" aria-label="Scientific calculator">
+      <header class="top">
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            <div class="name">Gnana's Sci Calci</div>
+            <div class="tag">Scientific • Offline • Keyboard</div>
+          </div>
+        </div>
+
+        <div class="toggles">
+          <button class="chip" id="angleBtn" title="Toggle DEG/RAD">DEG</button>
+          <button class="chip" id="shiftBtn" title="Shift (2nd functions)">SHIFT</button>
+          <button class="chip" id="themeBtn" title="Toggle theme">✨</button>
+        </div>
+      </header>
+
+      <section class="display">
+        <div class="line small" id="exprLine" aria-label="Expression"></div>
+        <div class="line big" id="resultLine" aria-label="Result">0</div>
+
+        <div class="meta">
+          <div class="pills">
+            <span class="pill" id="modePill">Ready</span>
+            <span class="pill" id="memPill">M: 0</span>
+          </div>
+
+          <div class="mini-actions">
+            <button class="mini" id="copyBtn" title="Copy result">Copy</button>
+            <button class="mini" id="clearHistoryBtn" title="Clear history">History ✕</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid" id="keys" aria-label="Calculator keys">
+        <!-- Row 1 -->
+        <button class="key soft" data-action="mc">MC</button>
+        <button class="key soft" data-action="mr">MR</button>
+        <button class="key soft" data-action="mplus">M+</button>
+        <button class="key soft" data-action="mminus">M-</button>
+        <button class="key danger" data-action="ac">AC</button>
+        <button class="key danger" data-action="del">DEL</button>
+
+        <!-- Row 2 -->
+        <button class="key fn" data-action="pow2" data-shift="pow3">x²</button>
+        <button class="key fn" data-action="sqrt" data-shift="cbrt">√x</button>
+        <button class="key fn" data-action="pow" data-shift="root">xʸ</button>
+        <button class="key fn" data-action="ln" data-shift="log10">ln</button>
+        <button class="key fn" data-action="fact">n!</button>
+        <button class="key op" data-insert="÷">÷</button>
+
+        <!-- Row 3 -->
+        <button class="key fn" data-action="sin" data-shift="asin">sin</button>
+        <button class="key fn" data-action="cos" data-shift="acos">cos</button>
+        <button class="key fn" data-action="tan" data-shift="atan">tan</button>
+        <button class="key fn" data-action="pi" data-shift="e">π</button>
+        <button class="key fn" data-action="pct">%</button>
+        <button class="key op" data-insert="×">×</button>
+
+        <!-- Row 4 -->
+        <button class="key soft" data-action="parenL">(</button>
+        <button class="key soft" data-action="parenR">)</button>
+        <button class="key fn" data-action="exp">EXP</button>
+        <button class="key fn" data-action="abs">abs</button>
+        <button class="key fn" data-action="inv">1/x</button>
+        <button class="key op" data-insert="-">−</button>
+
+        <!-- Row 5 -->
+        <button class="key num" data-insert="7">7</button>
+        <button class="key num" data-insert="8">8</button>
+        <button class="key num" data-insert="9">9</button>
+        <button class="key fn" data-action="rand">rand</button>
+        <button class="key fn" data-action="ans">ANS</button>
+        <button class="key op" data-insert="+">+</button>
+
+        <!-- Row 6 -->
+        <button class="key num" data-insert="4">4</button>
+        <button class="key num" data-insert="5">5</button>
+        <button class="key num" data-insert="6">6</button>
+        <button class="key fn" data-action="tenpow">10ˣ</button>
+        <button class="key fn" data-action="sign">±</button>
+        <button class="key op" data-action="enter">=</button>
+
+        <!-- Row 7 -->
+        <button class="key num wide" data-insert="0">0</button>
+        <button class="key num" data-insert=".">.</button>
+        <button class="key op" data-insert="^">^</button>
+        <button class="key op" data-insert="!">!</button>
+      </section>
+    </section>
+
+    <aside class="history" aria-label="History">
+      <div class="hist-head">
+        <div class="hist-title">History</div>
+        <div class="hist-sub">click an item to reuse</div>
+      </div>
+      <div class="hist-list" id="histList"></div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
