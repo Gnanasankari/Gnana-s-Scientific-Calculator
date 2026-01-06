@@ -25,15 +25,15 @@
         </div>
 
         <div class="toggles">
-          <button class="chip" id="angleBtn" title="Toggle DEG/RAD">DEG</button>
-          <button class="chip" id="shiftBtn" title="Shift (2nd functions)">SHIFT</button>
-          <button class="chip" id="themeBtn" title="Toggle theme">✨</button>
+          <button class="chip" id="angleBtn">DEG</button>
+          <button class="chip" id="shiftBtn">SHIFT</button>
+          <button class="chip" id="themeBtn">✨</button>
         </div>
       </header>
 
       <section class="display">
-        <div class="line small" id="exprLine" aria-label="Expression"></div>
-        <div class="line big" id="resultLine" aria-label="Result">0</div>
+        <div class="line small" id="exprLine"></div>
+        <div class="line big" id="resultLine">0</div>
 
         <div class="meta">
           <div class="pills">
@@ -42,13 +42,14 @@
           </div>
 
           <div class="mini-actions">
-            <button class="mini" id="copyBtn" title="Copy result">Copy</button>
-            <button class="mini" id="clearHistoryBtn" title="Clear history">History ✕</button>
+            <button class="mini" id="copyBtn">Copy</button>
+            <button class="mini" id="clearHistoryBtn">History ✕</button>
           </div>
         </div>
       </section>
 
-      <section class="grid" id="keys" aria-label="Calculator keys">
+      <section class="grid" id="keys">
+
         <!-- Row 1 -->
         <button class="key soft" data-action="mc">MC</button>
         <button class="key soft" data-action="mr">MR</button>
@@ -58,18 +59,18 @@
         <button class="key danger" data-action="del">DEL</button>
 
         <!-- Row 2 -->
-        <button class="key fn" data-action="pow2" data-shift="pow3">x²</button>
-        <button class="key fn" data-action="sqrt" data-shift="cbrt">√x</button>
-        <button class="key fn" data-action="pow" data-shift="root">xʸ</button>
-        <button class="key fn" data-action="ln" data-shift="log10">ln</button>
+        <button class="key fn" data-action="pow2">x²</button>
+        <button class="key fn" data-action="sqrt">√x</button>
+        <button class="key fn" data-action="pow">xʸ</button>
+        <button class="key fn" data-action="ln">ln</button>
         <button class="key fn" data-action="fact">n!</button>
         <button class="key op" data-insert="÷">÷</button>
 
         <!-- Row 3 -->
-        <button class="key fn" data-action="sin" data-shift="asin">sin</button>
-        <button class="key fn" data-action="cos" data-shift="acos">cos</button>
-        <button class="key fn" data-action="tan" data-shift="atan">tan</button>
-        <button class="key fn" data-action="pi" data-shift="e">π</button>
+        <button class="key fn" data-action="sin">sin</button>
+        <button class="key fn" data-action="cos">cos</button>
+        <button class="key fn" data-action="tan">tan</button>
+        <button class="key fn" data-action="pi">π</button>
         <button class="key fn" data-action="pct">%</button>
         <button class="key op" data-insert="×">×</button>
 
@@ -97,15 +98,18 @@
         <button class="key fn" data-action="sign">±</button>
         <button class="key op" data-action="enter">=</button>
 
-        <!-- Row 7 -->
+        <!-- ✅ Row 7 (FIXED) -->
+        <button class="key num" data-insert="1">1</button>
+        <button class="key num" data-insert="2">2</button>
+        <button class="key num" data-insert="3">3</button>
         <button class="key num wide" data-insert="0">0</button>
         <button class="key num" data-insert=".">.</button>
         <button class="key op" data-insert="^">^</button>
-        <button class="key op" data-insert="!">!</button>
+
       </section>
     </section>
 
-    <aside class="history" aria-label="History">
+    <aside class="history">
       <div class="hist-head">
         <div class="hist-title">History</div>
         <div class="hist-sub">click an item to reuse</div>
